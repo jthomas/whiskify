@@ -20,7 +20,7 @@ npm install whiskify
 
 ```
 const whiskify = require('whiskify')({api: 'https://', api_key: '...', namespace: '...'})
-const action = whiskify(function (item) { return i + 1; }))
+const action = whiskify(function (item) { return i + 1; })
 
 action(1).then(function (result) {
   // == 2
