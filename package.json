@@ -1,0 +1,28 @@
+{
+  "name": "whiskmap",
+  "version": "1.0.0",
+  "description": "Running array map operations using openwhisk actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jthomas/whiskmap.git"
+  },
+  "keywords": [
+    "openwhisk",
+    "map",
+    "javascript"
+  ],
+  "author": "James Thomas <james@jamesthom.as>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jthomas/whiskmap/issues"
+  },
+  "homepage": "https://github.com/jthomas/whiskmap#readme",
+  "dependencies": {
+    "openwhisk-client-js": "git+ssh://git@github.com/openwhisk/openwhisk-client-js.git",
+    "randomstring": "^1.1.4"
+  }
+}
