@@ -1,6 +1,6 @@
 {
   "name": "whiskify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility class to run JavaScript functions as OpenWhisk Actions",
   "main": "index.js",
   "scripts": {
