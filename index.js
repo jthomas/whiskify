@@ -1,6 +1,6 @@
 'use strict'
 
-const openwhisk = require('openwhisk-client-js')
+const openwhisk = require('openwhisk')
 const randomstring = require('randomstring')
 
 const Whiskify = params => {

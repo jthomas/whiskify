@@ -1,11 +1,10 @@
 const test = require('ava')
 const proxyquire = require('proxyquire')
 
-let ctor_params = {}, create_params = {}, invoke_params = {}
+let create_params = {}, invoke_params = {}
 let main
 
 const ctor = (params) => {
-  ctor_params = params
   return {
     actions: {
       create: (params) => {
@@ -15,13 +14,16 @@ const ctor = (params) => {
       },
       invoke: (params) => {
         invoke_params = params
-        return Promise.resolve(main(params.params))
+        const ret = {
+          response: {result: main(params.params)}
+        }
+        return Promise.resolve(ret)
       }
     }
   }
 }
 
-const whiskify = proxyquire('../index.js', {'openwhisk-client-js': ctor})({api: 'api', api_key: 'api_key', namespace: 'namespace'})
+const whiskify = proxyquire('../index.js', {'openwhisk': ctor})({api: 'api', api_key: 'api_key', namespace: 'namespace'})
 
 test('can create function as remote action', t => {
   const action = whiskify(function () { return 'hello world'})

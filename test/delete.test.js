@@ -19,7 +19,7 @@ const ctor = (params) => {
   }
 }
 
-const whiskify = proxyquire('../index.js', {'openwhisk-client-js': ctor})({api: 'api', api_key: 'api_key', namespace: 'namespace'})
+const whiskify = proxyquire('../index.js', {'openwhisk': ctor})({api: 'api', api_key: 'api_key', namespace: 'namespace'})
 
 test('can delete a remote function', t => {
   const source = function (a) {return a*2;}

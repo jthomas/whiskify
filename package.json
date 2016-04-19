@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/jthomas/whiskify#readme",
   "dependencies": {
-    "openwhisk-client-js": "git+ssh://git@github.com/openwhisk/openwhisk-client-js.git",
+    "openwhisk": "^2.0.0",
     "randomstring": "^1.1.4"
   },
   "devDependencies": {
