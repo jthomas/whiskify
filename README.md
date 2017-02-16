@@ -35,4 +35,4 @@ action.delete()
 
 ## limitations
 
-OpenWhisk Actions execute using NodeJS v0.12, functions must not use features not available on this platform, e.g. arrow functions. Functions must not reference variables defined outside the function definition. 
+OpenWhisk Actions currently execute using Node.js v6.9.1. Functions must not use features not available on this platform, e.g. async/await.
